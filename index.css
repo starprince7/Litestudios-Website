@@ -76,8 +76,8 @@ nav {
      .logo {
         cursor: pointer;
         width: 150px;
-        object-fit: contain;
-        height: 38px;
+        /* object-fit: contain; */
+        height: 34px;
         margin-right: 6%;
         /* border: solid #ffa000 1px;
         border-radius: 50px; */
@@ -186,21 +186,21 @@ nav {
 }
 @media(max-width: 600px) {
     #headline-intro {
-        background-image: url("./img/Mobile-Primary\ pattern-New4.png");
-        background-size: 100% 99.8%;
+        background-image: url("./img/Mobile-Primary\ pattern1.png");
+        background-size: 100% 99.5%;
         background-repeat: no-repeat;
     }
     .hero-container {
-        padding: 1px;
+        padding: 0.39%;
     }
 }@media(max-width: 375px) {
     #headline-intro {
-        background-image: url("./img/Mobile-Primary\ pattern-New4.png");
-        background-size: 100% 100%;
+        background-image: url("./img/Mobile-Primary\ pattern1.png");
+        background-size: 100% 99.899%;
         background-repeat: no-repeat;
     }
     .hero-container {
-        padding: 0.455%;
+        padding: 0%;
     }
 }
 
@@ -788,7 +788,7 @@ footer {
 
 
 .social-links svg {
-    width: 30px;
+    width: 38px;
 }
 
 
@@ -868,19 +868,20 @@ footer {
     } */
 
     .portfolio_logo_container > .sidenav-trigger svg {
-        border: solid black 1px;
+        border: solid #28333f 1px;
         border-radius: 3px;
         margin-right: 7vw!important;
         margin-top: 2vw!important;
+        width: 40px;
     }
 
     .portfolio_logo_container > .sidenav-trigger svg path {
-        fill: black;
+        fill: #28333f;
     }
 
     .portfolio_logo_container img {
         /* border: solid red; */
-        margin-right: 9%!important;
+        margin-left: 32%!important;
     }
 }@media(max-width: 600px) {
     .body {
@@ -1051,12 +1052,17 @@ footer {
 
 .mobile-copyright p {
     font-size: 13px;
-    color: #ffa000;
+    color: #fffbfb8c;
+}
+
+.mobile-copyright > p > a {
+    color: #a6cef8;
+    font-family: popRegular;
 }
 
 @media(max-width: 600px) {
     .portfolio_footer_mobile .social-links svg path {
-        fill: #fffbfb87!important;
+        fill: #fb751e!important;  /* #fffbfb87 */
         fill-opacity: 1;
     }
 }

@@ -19,7 +19,7 @@ $(document).ready(function () {
   });
 });
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const headline = document.querySelector(".intro-container h2");
   const rule = CSSRulePlugin.getRule(".intro-container .animation:after");
 
@@ -57,6 +57,9 @@ window.addEventListener("load", () => {
     ease: "ease",
     delay: 0.6,
   });
+  gsap.from(".About-content", {
+    duration: .6, y: "20%", opacity: 0, ease: 'power3.easeIn'
+  })
 });
 
 const logo = document.querySelector(".logo");

@@ -23,7 +23,7 @@
     />
     <title>Home | LiteStudios</title>
   </head>
-  <body>
+  <body class="Body-index">
     <div id="headline-intro">
       <div id="headline" class="container">
         <nav class="z-depth-0">
@@ -123,8 +123,8 @@
       <div class="container">
         <div class="Gallery section">
           <span class="caption">
-            <h4>recent work</h4>
-            <div class="divider amber darken-2"></div>
+            <h4 class="black-text">recent work</h4>
+            <div class="divider black darken-2"></div>
           </span>
           <div class="image_gallery_display">
             <div class="gallery-grid">
@@ -216,7 +216,7 @@
           </div>
         </div>
         <div class="call_to_action">
-          <p>view more works</p>
+          <p>view more work</p>
           <a href="/portfolio"><button>portfolio</button></a>
         </div>
       </div>
@@ -236,6 +236,7 @@
                 <div class="col s12 m12 l12">
                   <div class="calendar-container"></div>
                   <div class="input-field">
+                    <i class="material-icons prefix">event</i>
                     <input
                       type="text"
                       name="datepicker"
@@ -250,6 +251,7 @@
                 <!-- First Name Input Field -->
                 <div class="col s12 m6 l6">
                   <div class="input-field">
+                    <i class="material-icons prefix">person</i>
                     <input type="text" name="firstname" id="name" required />
                     <label for="name">Name </label>
                   </div>
@@ -257,8 +259,9 @@
                 <!-- Last Name Input Field -->
                 <div class="col s12 m6 l6">
                   <div class="input-field">
+                    <i class="material-icons prefix">person_outline</i>
                     <input type="text" name="lastname" id="lastname" />
-                    <label for="lastname">Last Name (optional) </label>
+                    <label for="lastname">Last Name (Optional) </label>
                   </div>
                 </div>
               </div>
@@ -266,6 +269,7 @@
                 <!-- Email Input Field -->
                 <div class="col s12 m6 l6">
                   <div class="input-field">
+                    <i class="material-icons prefix">email</i>
                     <input type="email" name="email" id="email" />
                     <label for="email">Enter Your Email Address </label>
                   </div>
@@ -274,6 +278,7 @@
                 <!-- CellPhone Input Field -->
                 <div class="col s12 m6 l6">
                   <div class="input-field">
+                    <i class="material-icons prefix">phone</i>
                     <input type="number" name="cellphone" id="cellphone" />
                     <label for="cellphone">Phone Number </label>
                   </div>
@@ -282,6 +287,11 @@
               </div>
               <!-- Location Input -->
               <div class="input-field col s12 location">
+                <i
+                  class="material-icons prefix"
+                  style="margin-left: 10px !important"
+                  >place</i
+                >
                 <select name="location">
                   <option name="location" value="" disabled selected>
                     Select a location
@@ -306,7 +316,7 @@
                 <div class="col s12 m6 l6">
                   <div class="input-field">
                     <input type="text" name="instagram" id="instagram" />
-                    <label for="instagram">Instagram </label>
+                    <label for="instagram">Instagram '@' </label>
                   </div>
                 </div>
                 <!-- Facebook -->
@@ -323,6 +333,64 @@
                 </div>
               </div>
             </form>
+            <div id="success_msg_container">
+              <div class="success_msg_header">
+                <p class="success_close_btn right">
+                  <i class="material-icons">close</i>
+                </p>
+              </div>
+              <div class="success-message">
+                <div class="container">
+                  <div class="icon-container">
+                    <i class="far fa-check-circle"></i>
+                  </div>
+                  <h3>Awesome!</h3>
+                  <p>
+                    Your booking has been confirmed! a confirmation email will
+                    be sent to you shortly.
+                  </p>
+                  <br />
+                  <form class="success_response_form ">
+                    <div class="row">
+                      <div class="col s12 m7 l7 survey-heading">
+                        <h6 style="text-transform: uppercase">
+                          Hi there! could you please tell us:
+                        </h6>
+                      </div>
+                      <div class="col s12 m5 l5 survey-form">
+                        <div class="input-field">
+                          <select name="statistic" required>
+                            <option value="" disabled selected>
+                              select an option
+                            </option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="From A Friend">From A Friend</option>
+                          </select>
+                          <label
+                            style="
+                              text-transform: lowercase;
+                              font-size: 18px;
+                              line-height: 1px;
+                            "
+                            class="select-label"
+                            >how did u hear about us?</label
+                          >
+                        </div>
+                        <div class="survey_form_btn">
+                          <button class="submit__btn not_loading_btn">
+                            submit
+                          </button>
+                          <button class="loading-btn" disabled>
+                            <div id="loader"></div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -473,5 +541,6 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="index.js"></script>
+    <script src="async.js"></script>
   </body>
 </html>

@@ -19,8 +19,10 @@ $(document).ready(function () {
   });
 });
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const headline = document.querySelector(".intro-container h2");
+  const hero_model_image = document.querySelector('#hero-model')
+  hero_model_image ? hero_model_image.style.visibility = 'visible' : null;
   const rule = CSSRulePlugin.getRule(".intro-container .animation:after");
 
   gsap.from(headline, {
@@ -58,7 +60,7 @@ window.addEventListener("DOMContentLoaded", () => {
     delay: 0.6,
   });
   gsap.from(".About-content", {
-    duration: .6, y: "20%", opacity: 0, ease: 'power3.easeIn'
+    duration: .6, y: "20%", opacity: 0, ease: 'power2.easeIn'
   })
 });
 

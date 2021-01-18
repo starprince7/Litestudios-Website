@@ -8,6 +8,11 @@ body {
      font-family: popLight;
 }
 
+button:active {
+    background: transparent!important;
+    border: solid 1px #ff0008!important;
+}
+
 @font-face {
     font-family: popLight;
     src: url('./fonts/Poppins/Poppins-Light.ttf')
@@ -33,7 +38,37 @@ body {
     src: url('./fonts/Montserrat/Montserrat-Bold.ttf')
 }
 
+#loading-container {
+    /* display: none; */
+}
 
+.loader-background {
+    cursor: wait;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh!important;
+    background: black;
+    z-index: 200;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}@media(max-width: 600px) {
+    .progress {
+        max-width: 58%!important;
+        /* height: 3.8px!important; */
+    }
+}
+
+.progress {
+    max-width: 350px;
+    /* height: 4px; */
+}
+.indeterminate {
+    background-color: #ff8f00!important;
+}
 
 .active {
     color: #fb751e!important;
@@ -44,7 +79,7 @@ body {
 }
 
 .Body-index {
-    background: linear-gradient(to left top,  #fb751e, #ff8f00);
+    background: linear-gradient(to left top,  #fb751e, #ce7b0f);
 }
 
 nav {
@@ -191,7 +226,7 @@ nav {
     background-repeat: no-repeat;
 }@media(min-width: 922px) {
     #headline-intro {
-        height: 100vh!important;
+        height: 800px!important;
         background-size: 100% 100%;
     }
 }
@@ -231,10 +266,6 @@ nav {
     padding: 50px 0;
 }
 
-#success_msg_container {
-    /* border: solid red; */
-    display: none!important;
-}
 
 #headline {
     margin-bottom: 2%!important;
@@ -362,10 +393,10 @@ nav {
 
 .intro-container button {
     cursor: pointer;
-    border: solid red;
-    padding: 12px 50px;
+    border: none;
+    padding: 13px 40px;
     border-radius: 3px;
-    background-color: #ff0008;
+    background-color: #ff0008e7;
     color: white;
     font-size: 18px;
     font-family: popBold;
@@ -388,7 +419,8 @@ nav {
     margin: 40px 0;
 }@media(max-width: 1400px) {
     .image_gallery_display {
-        overflow-x: auto;
+        /* border: solid green; */
+        overflow: auto;
         -ms-overflow-style: none; /* Hide Scrollbar for IE and Edge browsers */
         scrollbar-width: none; /* Hide Scrollbar for Fire-fox browsers */
     }
@@ -409,11 +441,13 @@ nav {
     height: 100%;
     object-fit: cover;
     border-radius: 1.5px;
-    box-shadow: -2px 1px 12px rgb(17, 17, 17);
     /* object-position: 0 0px; */
 }@media(max-width: 500px) {
     .image_gallery_display img {
         width: 100px;
+    }
+    .gallery-grid {
+        height: 250px;
     }
 }
 
@@ -424,7 +458,8 @@ nav {
     margin: auto;
     justify-content: center;
     /* flex-direction: column; */
-    border: solid #272725;
+    border: solid #272725 1.5px;
+    box-shadow: -2px 1px 12px rgb(17, 17, 17);
 }
 
 .one,
@@ -466,10 +501,12 @@ nav {
 .eight:hover,
 .nine:hover,
 .ten:hover {
-    /* z-index: 1!important; */
+    z-index: 1!important;
     object-fit: contain!important; /* IT DID NOT WORK! */
-    transform: scale(1.4);
-    width: 150px;
+    transform: scale(1.2);
+    /* width: 150px; */
+    flex-grow: 1;
+    flex-direction: column!important;
     height: auto;
 }
 
@@ -525,14 +562,20 @@ nav {
 
 .call_to_action button {
     cursor: pointer;
-    border: solid black 2px;
+    border: none;
+    box-shadow: 5px 7px 0px #171919e9;
     padding: 15px 50px;
-    border-radius: 2px black;
+    border-radius: 2.8px;
     background-color: #ff0008;
     color: white;
     font-size: 18px;
     font-family: montserratBold;
     text-transform: capitalize;
+}
+
+.call_to_action button:active {
+    box-shadow: 2.5px 3.5px 0px rgb(10, 10, 10);
+    background-color: #ff0008!important;
 }
 
 
@@ -606,7 +649,10 @@ form .location {
 
 .select-dropdown {
     color: #ffa000!important;
-    /* font-weight: bold; */
+    font-weight: bold;
+    border: solid #ffa000 1px!important;
+    padding-right: 8px!important;
+    border-radius: 3px!important;
 }
 
 .select-dropdown li.disabled>span {
@@ -682,13 +728,16 @@ form .location {
 .secondary,
 .primary {
     text-align: justify;
-    min-height: 320px!important;
+    min-height: 360px!important;
+    /* border: solid red 1px; */
     padding: 35px!important;
 }
 
 
 .secondary p {
-    color: #dedede;
+    color: #a7a7a7;
+    font-family: montserratRegular;
+    font-size: 13px;
 }
 
 .primary h4 {
@@ -905,7 +954,7 @@ footer {
     }
 
     .portfolio_logo_container > .sidenav-trigger svg path {
-        fill: #28333f;
+        fill: #ff8f00;
     }
 
     .portfolio_logo_container img {
@@ -1108,8 +1157,40 @@ footer {
 #success_msg_container {
     display: flex;
     flex-direction: column;
+    display: none;
     /* border: solid red */
-    box-shadow: 2px 1px 8px rgb(49, 49, 49)
+    /* box-shadow: 2px 4px 2px rgb(34, 34, 34) */
+
+    position: fixed;
+    top: 2.5%;
+    left: 25%;
+    z-index: 100;
+    /* max-width: 500px; */
+    /* transform: scale(.9) */
+}@media(max-width: 813px) {
+    #success_msg_container {
+        top: 5vh!important;
+        left: 9%;
+        /* transform: scale(.7); Gsap won't work cos of Scale prop! */
+    }
+}
+@media(max-width: 768px) {
+    #success_msg_container {
+        left: 6%;
+        /* transform: scale(.9); Gsap won't work cos of Scale prop! */
+    }
+}
+@media(max-width: 600px) {
+    #success_msg_container {
+        left: 2%;
+        /* transform: scale(.85)!important; Gsap won't work cos of Scale prop! */
+    }
+}
+@media(max-width: 500px) {
+    #success_msg_container {
+        left: 0%;
+        /* transform: scale(.85)!important; Gsap won't work cos of Scale prop! */
+    }
 }
 
 .success_msg_header {
@@ -1130,9 +1211,8 @@ footer {
 
 .success-message {
     /* border: solid red; */
-    padding: 55px 10px;
     text-align: center;
-    background-color: #111313;
+    background-color: #222626;
 }
 
 .success-message h3 {
@@ -1160,6 +1240,8 @@ footer {
     /* border: solid red 2px; */
     font-size: 70px;
     color: #20b164;
+    margin-top: 30px;
+    margin-bottom: -6px;
 }
 
 .success_close_btn {
@@ -1212,6 +1294,10 @@ footer {
     text-transform: capitalize;
     border-radius: 3px;
     background-color: #20b164ab;
+}
+
+.survey-form label {
+    text-transform: uppercase!important;
 }
 
 .survey_form_btn .loading-btn {

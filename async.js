@@ -9,6 +9,17 @@ const location_error = document.querySelector(".error-location");
 
 const success_message = document.querySelector("#success_msg_container");
 
+const alertModal = () => {
+  gsap.fromTo('#success_msg_container', {
+    y: '-100%',
+  },
+  {
+    duration: .7,
+    y: '3%',
+    ease: 'back'
+  })
+}
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   loader.style.display = "block";
@@ -70,6 +81,7 @@ form.addEventListener("submit", async (e) => {
       loader.style.display = "none";
       // alert('Successful!')
       success_message.style.display = "block";
+      alertModal()
     } else if (data.refinedErrors) {
       loader.style.display = "none";
       log("from Data", data.refinedErrors);

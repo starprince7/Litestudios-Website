@@ -3,29 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="index.css" />
         <!--Import Google Icon Font-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <title>Portfolio - LiteStudios</title>
+     <!-- Compiled and minified CSS -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+   />
+    <title>Portraits</title>
     <script src="//code.jivosite.com/widget/zy7eQiTxiK" async></script>
   </head>
-  <body class="body">
-        <!-- Loading Animation Here! -->
-        <div id="loader_background_gif">
-          <div class="container">
-            <img src="./img/litestudios_loader.gif" alt="loader" />
+  <body>
+        <!-- Loading Animation here! -->
+        <div id="loading-container">
+          <div class="loader-background">
+            <div class="progress amber lighten-5">
+              <div class="indeterminate"></div>
+            </div>
           </div>
         </div>
-        <!-- Loading animation Above! -->
+        <!-- Loading Animation Above! -->
     <div class="container">
       <nav class="z-depth-0 portfolio-nav">
         <div class="nav-header portfolio_logo_container">
@@ -84,76 +86,29 @@
         </div>
       </ul>
     </div>
-    <div class="portfolio-content hide-on-med-and-down">
-      <div class="row-flex">
-        <div class="col-portfolio l4">
-          <img
-            src="./img/portfolio-page/prewedding-7.jpg"
-            alt="wedding"
-            loading="lazy"
-          />
-          <a href="/wedding"><h4>wedding</h4></a>
+    <div class="container portraits-container">
+        <h1>Portraits</h1>
+        <div class="row">
+            <div class="col s6 m6 l5">
+                <img src="./img/pot-web/IMG_8134.jpg" alt="portraits" class="responsive-img materialboxed">
+            </div>
+            <div class="col s6 m6 l3">
+                <img src="./img/pot-web/miracle-9.jpg" alt="portraits" class="responsive-img materialboxed">
+            </div>
+            <div class="col s6 m6 l3">
+                <img src="./img/pot-web/mela-facial.jpg" alt="portraits" class="responsive-img materialboxed">
+            </div>
+            <div class="col s6 m6 l3">
+                <img src="./img/pot-web/ugo-2(1).jpg" alt="portraits" class="responsive-img materialboxed">
+            </div>
+            <div class="col s6 m6 l3">
+                <img src="./img/pot-web/queen-5.jpg" alt="portraits" class="responsive-img materialboxed">
+            </div>
         </div>
-        <div class="col-portfolio l4">
-          <img
-            src="./img/portfolio-page/IMG_8134.jpg"
-            alt="portraits"
-            loading="lazy"
-          />
-          <a href="/portraits"><h4>portraits</h4></a>
-        </div>
-        <div class="col-portfolio l4">
-          <img
-            src="./img/portfolio-page/mela-6.jpg"
-            alt="creative-shots"
-            loading="lazy"
-          />
-          <a href="/creative-shots"><h4>creative shots</h4></a>
-        </div>
-      </div>
     </div>
-    <div class="Mobile-portfolio hide-on-large-only">
-      <div class="portfolio-grid">
-        <div class="portfolio-grid i">
-          <a href="/wedding">
-            <h4>weddings</h4>
-            <div class="divider white"></div>
-          </a>
-        </div>
-        <div class="portfolio-grid ii">
-          <img
-            src="./img/portfolio-page/prewedding-7.jpg"
-            alt="wedding"
-            loading="lazy"
-          />
-        </div>
-        <div class="portfolio-grid iii">
-          <img
-            src="./img/portfolio-page/IMG_8134.jpg"
-            alt="portraits"
-            loading="lazy"
-          />
-        </div>
-        <div class="portfolio-grid iv">
-          <a href="/portraits">
-            <h4>portraits</h4>
-            <div class="divider white"></div>
-          </a>
-        </div>
-        <div class="portfolio-grid v">
-          <a href="/creative-shots">
-            <h4>creative shots</h4>
-            <div class="divider white"></div>
-          </a>
-        </div>
-        <div class="portfolio-grid vi">
-          <img
-            src="./img/portfolio-page/mela-6.jpg"
-            alt="creative-shots"
-            loading="lazy"
-          />
-        </div>
-      </div>
+    <br>
+    <br>
+    <!-- Footer Section -->
       <div class="portfolio_footer_mobile">
         <div class="mobile-social">
           <div class="social-links">
@@ -237,34 +192,35 @@
             >code plug</a</p>
         </div>
       </div>
-    </div>
-    <footer class="parent_portfolio_footer hide-on-med-and-down">
-      <div class="portfolio-footer container">
-        <div class="social-links"></div>
-        <div class="portfolio-copyright">
-          <p>
-            &copy; 2021 liteStudios developed by <a
-          class="white-text"
-          href="mailto:princeagezinweke@gmail.com?subject=I NEED A WEB DEVELOPER"
-          ><u>code plug</u></a
-          </p>
-        </div>
-      </div>
-    </footer>
-    <!-- Gsap 3  core -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
-    <!-- Gsap3 CSS Rule plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
-    <!-- Compiled jquery CDN Here! -->
     <script
-      src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"
-    ></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="index.js"></script>
-    <script src="portfolio.js"></script>
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"
+  ></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!-- Hitsteps TRACKING CODE - Manual 2020-12-24 - DO NOT CHANGE -->
+      <script type="text/javascript">
+        (function () {
+          var hstc = document.createElement("script");
+          hstc.src =
+            "https://log.hitsteps.net/track.php?code=88b2ff8739f33b76c670efa8859ce987";
+          hstc.async = true;
+          var htssc = document.getElementsByTagName("script")[0];
+          htssc.parentNode.insertBefore(hstc, htssc);
+        })();
+      </script>
+      <noscript
+        ><a href="http://www.hitsteps.com/"
+          ><img
+            src="//log.hitsteps.net/track.php?mode=img&amp;code=88b2ff8739f33b76c670efa8859ce987"
+            alt="web stats"
+            width="1"
+            height="1"
+          />visitor activity tracker</a
+        ></noscript
+      ><!-- Hitsteps TRACKING CODE - DO NOT CHANGE -->
+  <script src="portfolio.js"></script>
   </body>
 </html>

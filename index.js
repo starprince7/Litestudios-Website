@@ -20,10 +20,13 @@ $(document).ready(function () {
 });
 
 window.addEventListener("load", () => {
+  const isLoading_container = document.querySelector("#loading-container");
   const headline = document.querySelector(".intro-container h2");
   const hero_model_image = document.querySelector('#hero-model')
   hero_model_image ? hero_model_image.style.visibility = 'visible' : null;
   const rule = CSSRulePlugin.getRule(".intro-container .animation:after");
+
+  isLoading_container ? isLoading_container.style.display = 'none' : null
 
   gsap.from(headline, {
     duration: 1,
@@ -60,7 +63,7 @@ window.addEventListener("load", () => {
     delay: 0.6,
   });
   gsap.from(".About-content", {
-    duration: .6, y: "20%", opacity: 0, ease: 'power2.easeIn'
+    duration: .7, y: "20%", opacity: 0, ease: 'power1.easeIn'
   })
 });
 

@@ -21,35 +21,21 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
-    <title>Home | LiteStudios</title>
+    <title>Home - LiteStudios</title>
+    <script src="//code.jivosite.com/widget/zy7eQiTxiK" async></script>
   </head>
   <body class="Body-index">
+    <div id="loading-container">
+      <div class="loader-background">
+        <div class="progress amber lighten-4">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+    </div>
     <div id="headline-intro">
       <div id="headline" class="container">
         <nav class="z-depth-0">
           <div class="nav-header">
-            <!-- <div class="personal_info_icon">
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 30 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 2.14286C0 1.57454 0.197544 1.02949 0.549175 0.627629C0.900806 0.225765 1.37772 0 1.875 0H28.125C28.6223 0 29.0992 0.225765 29.4508 0.627629C29.8025 1.02949 30 1.57454 30 2.14286C30 2.71118 29.8025 3.25622 29.4508 3.65809C29.0992 4.05995 28.6223 4.28572 28.125 4.28572H1.875C1.37772 4.28572 0.900806 4.05995 0.549175 3.65809C0.197544 3.25622 0 2.71118 0 2.14286Z"
-                  fill="white"
-                />
-                <path
-                  d="M0 27.8571C0 27.2888 0.197544 26.7438 0.549175 26.3419C0.900806 25.94 1.37772 25.7143 1.875 25.7143H28.125C28.6223 25.7143 29.0992 25.94 29.4508 26.3419C29.8025 26.7438 30 27.2888 30 27.8571C30 28.4255 29.8025 28.9705 29.4508 29.3724C29.0992 29.7742 28.6223 30 28.125 30H1.875C1.37772 30 0.900806 29.7742 0.549175 29.3724C0.197544 28.9705 0 28.4255 0 27.8571Z"
-                  fill="white"
-                />
-                <path
-                  d="M1.875 12.8571C1.37772 12.8571 0.900806 13.0829 0.549175 13.4848C0.197544 13.8866 0 14.4317 0 15C0 15.5683 0.197544 16.1134 0.549175 16.5152C0.900806 16.9171 1.37772 17.1429 1.875 17.1429H16.875C17.3723 17.1429 17.8492 16.9171 18.2008 16.5152C18.5525 16.1134 18.75 15.5683 18.75 15C18.75 14.4317 18.5525 13.8866 18.2008 13.4848C17.8492 13.0829 17.3723 12.8571 16.875 12.8571H1.875Z"
-                  fill="white"
-                />
-              </svg>
-            </div> -->
             <img class="logo" src="./img/litestudios-logo3.png" alt="logo" />
             <div data-target="slide-out" class="sidenav-trigger menu-icon">
               <svg
@@ -294,7 +280,7 @@
                 >
                 <select name="location">
                   <option name="location" value="" disabled selected>
-                    Select a location
+                    Select location
                   </option>
                   <option value="Lagos">Lagos</option>
                   <option value="Owerri">Owerri</option>
@@ -302,7 +288,7 @@
                   <option value="Enugu">Enugu</option>
                   <option value="Onitsha">Onitsha</option>
                 </select>
-                <label>Location </label>
+                <label> </label>
                 <span class="red-text error-location"></span>
               </div>
               <!-- Social Media Inputs -->
@@ -316,14 +302,14 @@
                 <div class="col s12 m6 l6">
                   <div class="input-field">
                     <input type="text" name="instagram" id="instagram" />
-                    <label for="instagram">Instagram '@' </label>
+                    <label for="instagram">Instagram '@' (Optional)</label>
                   </div>
                 </div>
                 <!-- Facebook -->
                 <div class="col s12 m6 l6">
                   <div class="input-field">
                     <input type="text" name="facebook" id="facebook" />
-                    <label for="facebook">Facebook </label>
+                    <label for="facebook">Facebook (Optional)</label>
                   </div>
                 </div>
               </div>
@@ -350,14 +336,14 @@
                     be sent to you shortly.
                   </p>
                   <br />
-                  <form class="success_response_form ">
+                  <form class="success_response_form">
                     <div class="row">
-                      <div class="col s12 m7 l7 survey-heading">
+                      <div class="col s12 m5 l4 survey-heading">
                         <h6 style="text-transform: uppercase">
                           Hi there! could you please tell us:
                         </h6>
                       </div>
-                      <div class="col s12 m5 l5 survey-form">
+                      <div class="col s12 m7 l8 survey-form">
                         <div class="input-field">
                           <select name="statistic" required>
                             <option value="" disabled selected>
@@ -385,6 +371,7 @@
                             <div id="loader"></div>
                           </button>
                         </div>
+                        <br />
                       </div>
                     </div>
                   </form>

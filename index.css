@@ -57,7 +57,7 @@ button:active {
     align-items: center;
 }@media(max-width: 600px) {
     .progress {
-        max-width: 58%!important;
+        max-width: 50%!important;
         /* height: 3.8px!important; */
     }
 }
@@ -1166,7 +1166,7 @@ footer {
 #success_msg_container {
     display: flex;
     flex-direction: column;
-    /* display: none; */
+    display: none;
     /* border: solid red */
     /* box-shadow: 2px 4px 2px rgb(34, 34, 34) */
 

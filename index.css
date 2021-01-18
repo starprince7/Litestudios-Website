@@ -728,7 +728,7 @@ form .location {
 .secondary,
 .primary {
     text-align: justify;
-    min-height: 360px!important;
+    min-height: 270px!important;
     /* border: solid red 1px; */
     padding: 35px!important;
 }
@@ -752,7 +752,7 @@ form .location {
 
 
 .about-picture {
-    /* border: solid blue; */
+    /* border: solid blue;  */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -761,6 +761,14 @@ form .location {
     .about-picture {
         flex-direction: column;
     }
+}
+
+.primary_about_container {
+    min-height: 403px!important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-picture h3 {
@@ -1121,7 +1129,8 @@ footer {
 }
 
 .mobile-social .social-links svg {
-    width: 33px;
+    width: 38px;
+    /* border: solid green */
 }
 
 .mobile-social .social-links .facebook {
@@ -1157,13 +1166,13 @@ footer {
 #success_msg_container {
     display: flex;
     flex-direction: column;
-    display: none;
+    /* display: none; */
     /* border: solid red */
     /* box-shadow: 2px 4px 2px rgb(34, 34, 34) */
 
     position: fixed;
     top: 2.5%;
-    left: 25%;
+    left: 17%;
     z-index: 100;
     /* max-width: 500px; */
     /* transform: scale(.9) */
@@ -1176,19 +1185,21 @@ footer {
 }
 @media(max-width: 768px) {
     #success_msg_container {
-        left: 6%;
+        left: 5%;
+        width: 90%;
         /* transform: scale(.9); Gsap won't work cos of Scale prop! */
     }
 }
 @media(max-width: 600px) {
     #success_msg_container {
-        left: 2%;
+        left: 5%;
         /* transform: scale(.85)!important; Gsap won't work cos of Scale prop! */
     }
 }
 @media(max-width: 500px) {
     #success_msg_container {
-        left: 0%;
+        left: 1.1%;
+        width: 98%;
         /* transform: scale(.85)!important; Gsap won't work cos of Scale prop! */
     }
 }
@@ -1302,4 +1313,26 @@ footer {
 
 .survey_form_btn .loading-btn {
     display: none;
+}
+
+
+/* Spinner Styles Here! */
+
+.spinner_main {
+    display: none;
+}
+
+.spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .3);
+    /* border: solid red; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

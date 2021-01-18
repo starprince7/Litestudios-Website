@@ -6,6 +6,7 @@ const form = document.querySelector("form");
 const email_error = document.querySelector(".error-email");
 const phone_error = document.querySelector(".error-phone");
 const location_error = document.querySelector(".error-location");
+const spinner = document.querySelector('.spinner_main')
 
 const success_message = document.querySelector("#success_msg_container");
 
@@ -22,7 +23,7 @@ const alertModal = () => {
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  loader.style.display = "block";
+  spinner.style.display = "block";
 
   const date_picked = form.datepicker.value;
   const firstname = form.firstname.value;
@@ -78,7 +79,7 @@ form.addEventListener("submit", async (e) => {
       form.instagram.value = "";
       form.facebook.value = "";
 
-      loader.style.display = "none";
+      spinner.style.display = "none";
       // alert('Successful!')
       success_message.style.display = "block";
       alertModal()
